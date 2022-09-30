@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',
+    sans-serif;
+}
+.container{
+    width: 80%;
+    height: auto;
+    margin: auto;
+
+}
+header{
+    background-color: rebeccapurple;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gold;
+    font-size: 2rem;
+}
+.header-group{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.note{
+    background-color: rebeccapurple;
+    color: #f5f5f5;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 5px;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 4px 4px #353535;
+}
+.note-header{
+    border-bottom: #353535 3px solid;
+    width: 100%;
+    display: block;
+}
+.note-section{
+    display: block;
+    align-self: start;
+    width: 100%;
+    overflow-wrap: break-word;
+    padding: 10px 0 10px 0;
+}
+.note-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.notes-list{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 30px;
+}
+.new-note{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+.add-note-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    min-width: 100px;
+    color: #88abff;
+    font-size: 4rem;
+    border-radius: 50%;
+    border: 2px dashed #88abff;
+}
+.new-note span{
+    margin-top:30px;
+    color: #88abff;
+    
+}
+.add-new-note{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.note-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    gap: 10px;
+}
+.add-note{
+    background-color: rebeccapurple;
+    color: #f5f5f5;
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 5px;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 4px 4px #353535;
+    display: flex;
+}
+.delete-icon:hover{
+    transform: scale(1.5);
+    transition: 0.1s ease-in;
+    opacity: 0.8;
+    cursor: pointer;
+}
+input.note-header{
+    border: none;
+    background-color: transparent;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: 2px 2px 4px 4px #353535;
+    color: #f5f5f5;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 10px;
+}
+.note-header:focus{
+    outline: none;
+}
+textarea{
+    border: none;
+    background-color: transparent;
+    border-radius: 10px;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 2px 4px 4px #353535;
+    color: #f5f5f5;
+    font-size: 1rem;
+}
+textarea.active{
+    pointer-events: none;
+}
+textarea:focus{
+    outline: none;
+}
+button{
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow: 2px 2px 4px 4px #353535;
+    height: 50px;
+    color: #f5f5f5;
+    font-size: 2rem;
+    font-weight: 600;
+    border: none;
+    text-align: center;
+}
+button:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.save-btn.active{
+    pointer-events: none;
+    border: 3px solid red;
+}
+.search-bar{
+    width: 80%;
+    background-color: #EEF1FF;
+    margin: 10px auto 10px auto;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;  
+    gap: 10px;  
+    border-radius: 10px;
+}
+.search{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.mode-btn{
+    background-color: #EEF1FF;
+    color: #353535;
+    font-size: 1rem;
+    width: 100px;
+    height: 30px;
+    box-shadow: none;
+}
+.mode-btn:hover{
+    background-color: #88abff;
+}
+.dark-mode{
+    background-color: #353535;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.dark-mode .note{
+    background-color: #EEF1FF;
+    color: #353535;
+}
+.dark-mode header{
+    background-color: #2C3333;
+}
